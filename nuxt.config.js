@@ -17,7 +17,7 @@ export default {
       { hid: 'description', name: 'description', content: '' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/practica3Sdis/favicon.ico' }
     ]
   },
 
@@ -40,6 +40,7 @@ export default {
 
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
+    '@nuxtjs/pwa'
   ],
 
   // Vuetify module configuration (https://go.nuxtjs.dev/config-vuetify)
@@ -66,7 +67,7 @@ export default {
   },
   target: 'static',
   router: {
-    base: '/<repository-name>/'
+    base: '/practica3Sdis/'
   }
 
  

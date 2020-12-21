@@ -53,19 +53,14 @@
 <script>
 export default {
   name: 'Formulario',
-  props: {
-    nextKey: {
-      type: Text,
-      value: () => 0
-    }
-  },
+ 
   data: () => ({
     abierto: false,
     valid: true,
     val: 0.0,
     select: '',
     date: '',
-  
+
     checkbox: false,
     items: ['Alquiler', 'Comida', 'Transporte'],
   }),
@@ -76,7 +71,7 @@ export default {
     },
     add() {
     
-      this.$emit('input', { key: this.nextKey, f1: this.val, f2: this.select, f3:this.date });
+      this.$emit('input', { f1: this.val, f2: this.select, f3:this.date });
     },
   },
 }

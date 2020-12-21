@@ -1,4 +1,5 @@
-import {loadData} from '@/services/storage'
+import {loadData,saveItem} from '@/services/storage'
+
 export const state = () => ({
     items: [],
     initialized: false,
@@ -9,7 +10,11 @@ export const state = () => ({
   export const mutations = {
     add(state, item) {
       state.items.push(item)
-      console.log(state.items)
+      if(item.key>=state.nextKey){
+        state.nextKey=item.key+1;
+        console.log(state.items)
+      }
+      
     },
     remove(state, item) {
       state.items.splice(state.items.indexOf(item), 1)
@@ -19,14 +24,17 @@ export const state = () => ({
     },
     initialize(state){
       state.initialized = true
+    
     }
   }
 
   export const actions = {
     async add({state, getters, dispatch, commit}, item){
-      state.nextKey+=1;
+      item.key=state.nextKey;
+      
+      //state.nextKey=state.items.length(); //añadimos la clave en funcion de la longitud de el array indice+1
       commit('add', item);
-      //await saveItem(item);
+      await saveItem(item);
       
 
     },

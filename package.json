@@ -10,6 +10,7 @@
     "deploy": "push-dir --remote pages --dir=dist --branch=gh-pages --cleanup"
   },
   "dependencies": {
+    "@nuxtjs/pwa": "^3.3.3",
     "core-js": "^3.6.5",
     "localforage": "^1.9.0",
     "nuxt": "^2.14.6"

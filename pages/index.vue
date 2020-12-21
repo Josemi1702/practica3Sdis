@@ -2,7 +2,7 @@
   <div>
     <v-card elevation="2">
       <v-card-text>
-        <formulario @input="add" :nextKey='nextKey'></formulario>
+        <formulario @input="add" ></formulario>
       </v-card-text>
     </v-card>
     <tabla :items="items" :todos="todos" class="mt-5"></tabla>
@@ -38,7 +38,7 @@ export default {
       console.log(this.$store.state.items)
       return this.$store.state.items
     },*/
-    ...mapState('model',['items', 'nextKey'])
+    ...mapState('model',['items'])
   },
   methods: {
     /*add(v){
