@@ -2,7 +2,7 @@
   <img
     class="VuetifyLogo"
     alt="Vuetify Logo"
-    src="~static/vuetify-logo.svg"
+    :src= "required('~static/vuetify-logo.svg')"
   >
 </template>
 
